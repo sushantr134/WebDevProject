@@ -1,8 +1,10 @@
+require("dotenv").config()
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Movie Search Tool`,
+    description: ``,
+    author: `@sushantr134`,
+    apiKey: process.env.GATSBY__MOVIE_API_KEY,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -13,13 +15,29 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: ["Quicksand", "sans-serif"],
+        },
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
+    {
+      resolve: "gatsby-plugin-import",
+      options: {
+        libraryName: "antd",
+        style: "css", // or 'css'
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Movies-Search-Tool v1.0`,
+        short_name: `Movbees`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

@@ -17,10 +17,18 @@ const fetchMovieSearchHandler = (state = initialState, action) => {
         }
       }
     case SELECTED_SEARCH_MOVIE:
-      return {
-        ...state,
-        individualSearchMovieResult: action.payload,
+      if (action.payload.status === 200) {
+        return {
+          ...state,
+          individualSearchMovieResult: action.payload.data,
+        }
+      } else {
+        return {
+          ...state,
+          individualSearchMovieResult: null,
+        }
       }
+
     default:
       return state
   }

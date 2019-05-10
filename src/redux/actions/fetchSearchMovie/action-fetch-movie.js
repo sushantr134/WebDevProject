@@ -5,7 +5,7 @@ export const fetchMovieBySearch = searchText => {
   return dispatch => {
     axios
       .get(
-        `http://www.omdbapi.com/?s=${searchText.trim()}&apikey=${
+        `https://www.omdbapi.com/?s=${searchText.trim()}&apikey=${
           process.env.GATSBY__MOVIE_API_KEY
         }`
       )

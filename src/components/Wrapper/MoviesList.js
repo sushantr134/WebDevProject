@@ -3,7 +3,7 @@ import styles from "./Movies.module.scss"
 import notFoundLogo from "../../images/notfound.svg"
 import { Link } from "gatsby"
 
-const MoviesListWrapper = ({ moviesData }) => {
+const MoviesListWrapper = ({ moviesData, fetchIndividualMovie }) => {
   return (
     <section className={styles.moviesListSection}>
       {moviesData.map((moviesObj, i) => {
@@ -15,8 +15,13 @@ const MoviesListWrapper = ({ moviesData }) => {
               title={moviesObj.Title}
             />
             <h2>{moviesObj.Title}</h2>
-            <Link to={`movie/`} state={{ movieId: moviesObj.imdbID }}>
-              <button className={styles.btnMoviesListCard}>View details</button>
+            <Link
+              to={`movie/`}
+              state={{
+                movieId: moviesObj.imdbID,
+              }}
+            >
+              <span className={styles.btnMoviesListCard}>View details</span>
             </Link>
           </div>
         )

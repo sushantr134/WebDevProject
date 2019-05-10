@@ -61,20 +61,3 @@ export default class SearchWindowMovies extends React.PureComponent {
     )
   }
 }
-
-// const mapStateToProps = state => {
-//   return {
-//     searchMoviesStore: state.movieSearchStore,
-//   }
-// }
-
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     fetchMoviesSearch: searchText => dispatch(fetchMovieBySearch(searchText)),
-//   }
-// }
-
-// export default connect(
-//   mapStateToProps,
-//   mapDispatchToProps
-// )(SearchWindowMovies)

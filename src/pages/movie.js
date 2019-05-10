@@ -1,30 +1,31 @@
 import * as React from "react"
-
-class RenderMoviePage extends React.PureComponent {
-  constructor(props) {
-    super(props)
-  }
-  render() {
-    return (
-      <section>
-        <h1>title</h1>
-        <div>
-          <div />
-          <div />
-        </div>
-      </section>
-    )
-  }
-}
+import RenderMoviePage from "../components/Wrapper/RenderMoviePage"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 export default class MoviePage extends React.PureComponent {
   constructor(props) {
     super(props)
+    this.state = {
+      movieId: null,
+    }
   }
   componentDidMount() {
-    console.log(this.props.location.state)
+    if (this.props.location.state != null) {
+      this.setState({ movieId: this.props.location.state.movieId })
+    }
   }
   render() {
-    return <RenderMoviePage data={null} />
+    return (
+      <Layout>
+        <SEO
+          title="Movie Details"
+          keywords={[`gatsby`, `application`, `react`]}
+        />
+        {this.state.movieId != null && (
+          <RenderMoviePage movieId={this.state.movieId} />
+        )}
+      </Layout>
+    )
   }
 }

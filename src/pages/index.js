@@ -3,12 +3,12 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import SearchWindowMovies from "../components/SearchWindow/SearchWindow"
+import MainAppContainer from "../components/Wrapper/Container"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <SearchWindowMovies />
+    <MainAppContainer />
   </Layout>
 )
 

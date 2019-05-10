@@ -19,7 +19,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Quicksand", "sans-serif"],
+          families: ["Quicksand", "PT Sans", "sans-serif"],
         },
       },
     },
@@ -33,14 +33,15 @@ module.exports = {
         style: "css", // or 'css'
       },
     },
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Movies-Search-Tool v1.0`,
         short_name: `Movbees`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#f7af11`,
+        theme_color: `#f7af11`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },

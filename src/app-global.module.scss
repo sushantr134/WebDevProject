@@ -9,8 +9,10 @@
   font-family: "Quicksand", sans-serif;
 }
 
-$primary-theme-color: #ffc507;
+$primary-theme-color: #f7af11;
 $primary-text-color: #383838;
+$primary-font-family: "PT Sans", sans-serif;
+$dark-theme-bg-color: #1b1b1b;
 
 @mixin gridMaker($col, $row, $gap) {
   display: grid;

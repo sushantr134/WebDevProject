@@ -1,0 +1,50 @@
+@import "../../app-global.module.scss";
+
+.moviesListSection {
+  width: 100%;
+  height: max-content;
+  padding: 4em;
+  @include gridMaker(repeat(auto-fit, minmax(300px, 1fr)), "", 1.5em);
+  justify-items: center;
+  background: linear-gradient(-180deg, $primary-theme-color, white);
+
+  .moviesListCardItem {
+    width: 95%;
+    max-width: 400px;
+    padding: 0.55em;
+    min-height: 250px;
+    min-width: 300px;
+    @include alignCenter;
+    flex-direction: column;
+    align-items: center;
+    border: 0.1em solid $dark-theme-bg-color;
+    border-radius: 0.2em;
+    background: white;
+    cursor: pointer;
+    img {
+      @include responsiveImage(80%, 90%);
+      object-fit: contain;
+    }
+    h2 {
+      text-align: center;
+      font-size: 1.15rem;
+      color: #0342a7;
+      font-family: $primary-font-family;
+    }
+    .btnMoviesListCard {
+      @include alignCenter;
+      align-items: center;
+      font-size: 0.78rem;
+      letter-spacing: 0.4px;
+      font-weight: bold;
+      padding: 0.57em;
+      width: 120px;
+      border-radius: 0.2em;
+      border: none;
+      outline: 0;
+      cursor: pointer;
+      color: white;
+      background: #327804;
+    }
+  }
+}

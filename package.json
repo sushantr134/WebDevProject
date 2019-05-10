@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "moobees-starter-default",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Sushant Singh <sushantr134@gmail.com>",
   "dependencies": {
     "antd": "^3.17.0",
     "axios": "^0.18.0",

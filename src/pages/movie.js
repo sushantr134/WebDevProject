@@ -6,11 +6,6 @@ export default class MoviePage extends React.PureComponent {
   }
 
   render() {
-    return (
-      <div>
-        {typeof this.props.location.state.movieId != undefined &&
-          this.props.location.state.movieId}
-      </div>
-    )
+    return <div />
   }
 }

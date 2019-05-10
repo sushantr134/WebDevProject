@@ -6,6 +6,10 @@ export default class MoviePage extends React.PureComponent {
   }
 
   render() {
-    return <div>{this.props.location.state.movieId}</div>
+    return (
+      <div>
+        {this.props.location.state.movieId && this.props.location.state.movieId}
+      </div>
+    )
   }
 }

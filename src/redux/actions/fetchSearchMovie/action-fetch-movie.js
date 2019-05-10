@@ -22,7 +22,7 @@ export const fetchMovieById = imdbId => {
   return dispatch => {
     axios
       .get(
-        `http://www.omdbapi.com/?i=${imdbId.trim()}&apikey=${
+        `https://www.omdbapi.com/?i=${imdbId.trim()}&apikey=${
           process.env.GATSBY__MOVIE_API_KEY
         }`
       )

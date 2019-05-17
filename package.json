@@ -7,7 +7,9 @@
   "dependencies": {
     "antd": "^3.17.0",
     "axios": "^0.18.0",
+    "cors": "^2.8.5",
     "dotenv": "^8.0.0",
+    "express": "^4.16.4",
     "gatsby": "^2.4.2",
     "gatsby-image": "^2.0.41",
     "gatsby-plugin-config": "^1.0.7",
@@ -22,6 +24,7 @@
     "gatsby-transformer-sharp": "^2.1.19",
     "joi": "^14.3.1",
     "lodash": "^4.17.11",
+    "morgan": "^1.9.1",
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -34,6 +37,7 @@
   },
   "devDependencies": {
     "babel-plugin-import": "^1.11.0",
+    "nodemon": "^1.19.0",
     "prettier": "^1.17.0"
   },
   "keywords": [
@@ -46,6 +50,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "app": "nodemon server.js",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
